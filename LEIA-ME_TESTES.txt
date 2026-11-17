@@ -1,0 +1,16 @@
+LABD — versão com os códigos originais preservados
+
+12 notebooks. Foram mantidas as respostas adicionadas na primeira revisão e restauradas alterações não necessárias em códigos já escritos. Células originais sem alteração conservam suas saídas e metadados originais; as saídas de células corrigidas não foram simuladas.
+
+Correções pontuais nos códigos existentes:
+- Web scraping: chamada de prettify, strip=True, extração no contexto do site de países e inicialização de df_densidade com áreas positivas.
+- Selenium: espera explícita ao localizar os resultados e o título (havia NoSuchElementException). Mantidos URL de exemplo, extração de autor, ano, demais campos e laços originais. Se o site não retornar o artigo de exemplo, teste outro link da sua lista. As células 51 e 52 são tentativas alternativas da coleta; confira antes de executar as duas, pois podem duplicar registros.
+- API pública: nome correto do DataFrame e URL da PokeAPI.
+- Procedures: aumento de 60% para testar o limite de 50%; parâmetro OUT exigido no exercício, mantendo o INSERT e SELECT originais.
+- Grant/Revoke: pacote pymysql, tabela projetos (na qual a permissão foi concedida) e execução do Streamlit com o Python do ambiente. Execute a célula de Streamlit direta OU a alternativa subprocess, não ambas.
+
+SQLite: atividade.ipynb e empresa.db originais, sem banco em memória e sem registros inventados. O banco enviado já contém as tabelas e registros; executar CREATE TABLE/INSERT novamente pode resultar em erros. Faça uma cópia do banco antes de testar. Para consultar os dados existentes, execute a conexão e as consultas, sem repetir a criação e os INSERTs. Para reproduzir a criação do zero, use uma pasta de teste sem o empresa.db existente; os IDs 1 a 4 não aparecem na primeira inserção original e alguns exercícios dependem deles. Revise esses dados com seu material de aula antes de executar.
+
+MySQL: use apenas uma instância local de treinamento. Há comandos DROP DATABASE e de criação/remoção de usuários. Confira usuário, senha e localhost. Os notebooks 12 e 13 recriam sistema_empresa com estruturas diferentes: não execute em paralelo. No notebook 10, execute o SQL indicado no Workbench entre as células Python do exercício correspondente. Teste procedures, triggers, views e permissões no seu ambiente.
+
+Mercado Livre exige autorização OAuth e credenciais próprias. Selenium exige Chrome e driver compatíveis. APIs e scraping exigem internet. MySQL, Selenium e APIs não foram executados nesta revisão; não há garantia de execução integral. As saídas originais podem representar execuções anteriores.
